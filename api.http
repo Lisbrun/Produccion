@@ -1,0 +1,29 @@
+GET http://localhost:1234/movies
+
+### obtener una pelicula de acuerdo a la id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+
+GET http://localhost:1234/movies?genre=dddddd
+### Query por parametro JS
+
+### post a una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title":"The good father",
+  "year":1990,
+  "director": "Francis Ford Coppola",
+  "duration": 120,
+  "genre": ["Drama"],
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp"
+}
+
+### PATCH a una pelicula
+PATCH http://localhost:1234/movies/1aeb6710-6d7f-4c19-bb14-9f30a21d8b5fc
+Content-Type: application/json
+
+{
+  "year": 2023
+}
